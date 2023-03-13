@@ -10,7 +10,7 @@ import { InfoCards } from '../../components/InfoCards/InfoCards';
 import { Chart } from '../../components/Chart/Chart';
 export const App = () => {
   const { data, isfetching } = useGetCryptosQuery(5);
-  const { data, isfetching } = useGetHystoryQuery("Qwsogvtv82FCd", "24h")
+  const { data: history } = useGetHystoryQuery({ 'Qwsogvtv82FCd', '24h'});
 
   if (isfetching) return '<h1>Loading</h1>';
   console.log(data);
