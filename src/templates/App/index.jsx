@@ -1,11 +1,17 @@
 import * as Styled from './styles';
 import P from 'prop-types';
-import { useGetCryptosQuery } from '../../services/cryptoApi';
+import {
+  useGetCryptosQuery,
+  useGetHystoryQuery,
+} from '../../services/cryptoApi';
 import { Card } from '../../components/Card/Card';
 import millify from 'millify';
 import { InfoCards } from '../../components/InfoCards/InfoCards';
+import { Chart } from '../../components/Chart/Chart';
 export const App = () => {
   const { data, isfetching } = useGetCryptosQuery(5);
+  const { data, isfetching } = useGetHystoryQuery("Qwsogvtv82FCd", "24h")
+
   if (isfetching) return '<h1>Loading</h1>';
   console.log(data);
   const coins = data?.data?.coins;
