@@ -2,20 +2,26 @@ import * as Styled from './styles';
 import P from 'prop-types';
 import {
   useGetCryptosQuery,
-  useGetHystoryQuery,
+  useGetHistoryQuery,
+  useGetCryptoDetailsQuery,
 } from '../../services/cryptoApi';
 import { Card } from '../../components/Card/Card';
 import millify from 'millify';
 import { InfoCards } from '../../components/InfoCards/InfoCards';
-import { Chart } from '../../components/Chart/Chart';
+import { CryptoChart } from '../../components/Chart/CryptoChart';
+
 export const App = () => {
   const { data, isfetching } = useGetCryptosQuery(5);
-  const { data: history } = useGetHystoryQuery({ 'Qwsogvtv82FCd', '24h'});
 
+  /* const { data: coin, coinLoading } = useGetCryptoDetailsQuery('Qwsogvtv82FCd'); */
   if (isfetching) return '<h1>Loading</h1>';
-  console.log(data);
+
+  /* if (coinLoading) return '<h1>Loading</h1>'; */
+
   const coins = data?.data?.coins;
+  /* const coinsDetails = coin?.data?.coin; */
   const stats = data?.data?.stats;
+
   return (
     <Styled.Container>
       <div className="app-container">
@@ -50,6 +56,15 @@ export const App = () => {
             />
           ))}
         </div>
+
+        {/*
+        <h1>
+          {coinHistory?.history.map((i) => (
+            <h1>{i.price}</h1>
+          ))}
+        </h1> */}
+        {/* <Chart coinHistory={coinHistory} /> */}
+        <CryptoChart />
       </div>
     </Styled.Container>
   );
