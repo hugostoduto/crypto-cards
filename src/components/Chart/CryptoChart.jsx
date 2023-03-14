@@ -14,7 +14,10 @@ ChartJs.defaults.borderColor = '#8c7af9';
 ChartJs.defaults.color = '#fff';
 
 export const CryptoChart = ({ coinData }) => {
-  const [coinId, setCoinId] = useState({ name: '', id: '' });
+  const [coinId, setCoinId] = useState({
+    name: 'Bitcoin',
+    id: 'Qwsogvtv82FCd',
+  });
 
   const { data: history, loading } = useGetHistoryQuery(coinId.id);
   if (loading) return '<h1>Loading</h1>';

@@ -12,6 +12,15 @@ import { InfoCards } from '../../components/InfoCards/InfoCards';
 import { CryptoChart } from '../../components/Chart/CryptoChart';
 import { SelectCrypto } from '../../components/SelectCrypto/SelectCrypto';
 import React from 'react';
+import { Typography } from 'antd';
+import {
+  BankFilled,
+  CodeFilled,
+  DollarCircleFilled,
+  FundFilled,
+  SlidersFilled,
+} from '@ant-design/icons';
+const { Title } = Typography;
 
 export const App = () => {
   const { data, isfetching } = useGetCryptosQuery(5);
@@ -28,7 +37,20 @@ export const App = () => {
   return (
     <Styled.Container>
       <div className="app-container">
-        <h1>Global Crypto Stats</h1>
+        <div className="header">
+          <div className="icon">
+            <SlidersFilled />
+          </div>
+          <h1>Crypto Market</h1>
+        </div>
+        <div className="section-header">
+          <div className="section-header-title">
+            <div className="icon">
+              <BankFilled />
+            </div>
+            <h1>Crypto Stats</h1>
+          </div>
+        </div>
         <div className="stats-container">
           <InfoCards
             title="Total Cryptocurrencie"
@@ -45,8 +67,16 @@ export const App = () => {
             info={millify(stats?.totalMarketCap)}
           />
         </div>
-        <h1>Top 5 Cryptos</h1>
-        <div className="top-5">
+        <div className="section-header">
+          <div className="section-header-title">
+            <div className="icon">
+              <DollarCircleFilled />
+            </div>
+            <h1>Crypto Coins</h1>
+          </div>
+        </div>
+
+        <div className="cards-container">
           {coins?.map((coin) => (
             <Card
               key={coin.uuid}
@@ -59,9 +89,20 @@ export const App = () => {
             />
           ))}
         </div>
-
-        <div className="chart">
+        <div className="section-header">
+          <div className="section-header-title">
+            <div className="icon">
+              <FundFilled />
+            </div>
+            <h1>Charts</h1>
+          </div>
+        </div>
+        <div className="chart-container">
           <CryptoChart coinData={coins} />
+        </div>
+        <div className="footer">
+          <CodeFilled />
+          <p>Develope by @hugostoduto</p>
         </div>
       </div>
     </Styled.Container>

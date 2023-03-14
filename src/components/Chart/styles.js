@@ -2,15 +2,16 @@ import styled, { css } from 'styled-components';
 
 export const Container = styled.div`
 ${({ theme }) => css`
+width: 70%;
 .crypto-chart-container{
-  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items: center;
+  position: relative;
   padding: 50px 20px;
   background-color: ${theme.colors.darkGray};
   border-radius: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
   box-shadow: ${theme.shadows.lightShadow};
 }
 .crypto-chart-controls{
