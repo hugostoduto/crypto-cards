@@ -14,6 +14,7 @@ ${({ theme }) => css`
     border-radius: 20px;
     position: relative;
     margin: 20px 20px;
+    box-shadow: ${theme.shadows.lightShadow};
 
   }
   .card-image{
@@ -24,7 +25,7 @@ ${({ theme }) => css`
     width: 70px;
     border-radius: 999px;
     height: 70px;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    box-shadow: ${theme.shadows.lightShadow};
   }
   .card-image img{
 
@@ -44,7 +45,7 @@ ${({ theme }) => css`
     width: 90%;
     height: 180px;
     border-radius: 20px;
-    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    box-shadow: ${theme.shadows.lightShadow};
 
     border: solid 3px ${theme.colors.purple};
   }

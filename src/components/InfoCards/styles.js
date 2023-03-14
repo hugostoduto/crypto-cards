@@ -14,6 +14,7 @@ ${({ theme }) => css`
     border-radius: 20px;
     position: relative;
     margin: 20px;
+    box-shadow: ${theme.shadows.lightShadow};
 
   }
 

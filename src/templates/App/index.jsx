@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import * as Styled from './styles';
 import P from 'prop-types';
 import {
@@ -9,6 +10,8 @@ import { Card } from '../../components/Card/Card';
 import millify from 'millify';
 import { InfoCards } from '../../components/InfoCards/InfoCards';
 import { CryptoChart } from '../../components/Chart/CryptoChart';
+import { SelectCrypto } from '../../components/SelectCrypto/SelectCrypto';
+import React from 'react';
 
 export const App = () => {
   const { data, isfetching } = useGetCryptosQuery(5);
@@ -57,14 +60,9 @@ export const App = () => {
           ))}
         </div>
 
-        {/*
-        <h1>
-          {coinHistory?.history.map((i) => (
-            <h1>{i.price}</h1>
-          ))}
-        </h1> */}
-        {/* <Chart coinHistory={coinHistory} /> */}
-        <CryptoChart />
+        <div className="chart">
+          <CryptoChart coinData={coins} />
+        </div>
       </div>
     </Styled.Container>
   );

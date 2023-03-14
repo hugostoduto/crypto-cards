@@ -11,18 +11,20 @@ height: 100vh;
 
 }
 .app-container h1{
-font-size: 3rem;
-color: ${theme.colors.white};
+  font-size: 3rem;
+  color: ${theme.colors.white};
 }
 .stats-container{
-display: flex;
-width: 90%;
-justify-content: center;
-overflow: hidden;
-overflow-x: auto;
-flex-wrap: wrap;
+  box-sizing: border-box;
+  display: flex;
+  width: 90%;
+  justify-content: center;
+
+  flex-wrap: wrap;
 }
 .top-5{
+
+
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -30,7 +32,9 @@ flex-wrap: wrap;
   justify-content: center;
 
 }
-
+.chart{
+  width: 100%;
+}
 `}
 
 `;

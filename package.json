@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.3",
+    "antd": "^5.3.1",
     "apexcharts": "^3.37.1",
     "chart.js": "^4.2.1",
     "millify": "^6.1.0",

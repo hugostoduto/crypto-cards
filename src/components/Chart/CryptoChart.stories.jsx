@@ -1,11 +1,11 @@
 import React from 'react';
-import { Chart } from './Chart';
+import { CryptoChart } from './CryptoChart';
 
 export default {
-  title: 'Chart',
-  component: Chart,
+  title: 'CryptoChart',
+  component: CryptoChart,
   args: {
-    children: 'Chart',
+    children: 'CryptoChart',
   },
   argTypes: {
     children: { type: 'string' },
@@ -15,7 +15,7 @@ export default {
 export const Template = (args) => {
   return (
     <div>
-      <Chart {...args} />
+      <CryptoChart {...args} />
     </div>
   );
 };
