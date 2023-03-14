@@ -14,14 +14,20 @@ ${({ theme }) => css`
 
 }
 .header{
-  font-size: 2rem;
+  font-size: 1.7rem;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: ${theme.colors.purple};
+  color: ${theme.colors.white};
+  box-shadow: ${theme.shadows.lightShadow};
+  height: 170px;
+  margin-bottom:50px ;
+  border-bottom: solid  3px ${theme.colors.purple};
+}
+.header-icon{
+  font-size: 4rem;
 
-  padding: 50px 0px 80px 0px;
 }
 .header h1{
   margin-left: 50px;

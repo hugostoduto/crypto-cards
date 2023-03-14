@@ -38,9 +38,10 @@ export const App = () => {
     <Styled.Container>
       <div className="app-container">
         <div className="header">
-          <div className="icon">
+          <div className="header-icon">
             <SlidersFilled />
           </div>
+
           <h1>Crypto Market</h1>
         </div>
         <div className="section-header">
