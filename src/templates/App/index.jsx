@@ -1,6 +1,5 @@
 /* eslint-disable no-unused-vars */
 import * as Styled from './styles';
-import P from 'prop-types';
 import {
   useGetCryptosQuery,
   useGetHistoryQuery,
@@ -108,8 +107,4 @@ export const App = () => {
       </div>
     </Styled.Container>
   );
-};
-
-App.propTypes = {
-  children: P.node.isRequired,
 };
