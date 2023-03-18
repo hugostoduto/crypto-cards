@@ -94,7 +94,7 @@ export const App = () => {
             <div className="icon">
               <FundFilled />
             </div>
-            <h1>Charts</h1>
+            <h1>Chart</h1>
           </div>
         </div>
         <div className="chart-container">
