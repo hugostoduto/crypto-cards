@@ -5,7 +5,7 @@ World of Cryptocurrency
 
 ## Screenshots
 
-![App Screenshot](https://static.wixstatic.com/media/afe1f6_bf093a090b4047f49178f38d661824e7~mv2.png)
+![App Screenshot](https://static.wixstatic.com/media/afe1f6_c2e318cc524344f58700771b16e5b9e7~mv2.png)
 
 
 ## Stacks
