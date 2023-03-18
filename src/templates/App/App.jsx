@@ -11,7 +11,6 @@ import { InfoCards } from '../../components/InfoCards/InfoCards';
 import { CryptoChart } from '../../components/Chart/CryptoChart';
 import { SelectCrypto } from '../../components/SelectCrypto/SelectCrypto';
 import React from 'react';
-import { Spin } from 'antd';
 import {
   BankFilled,
   CodeFilled,
@@ -20,18 +19,13 @@ import {
   SlidersFilled,
 } from '@ant-design/icons';
 import { Link } from 'react-router-dom';
+import { Loader } from '../../components/Loader/Loader';
 
 export const App = () => {
   const { data, isFetching } = useGetCryptosQuery(5);
-
-  /* const { data: coin, coinLoading } = useGetCryptoDetailsQuery('Qwsogvtv82FCd'); */
-
-  /* if (coinLoading) return '<h1>Loading</h1>'; */
-
   const coins = data?.data?.coins;
-  /* const coinsDetails = coin?.data?.coin; */
   const stats = data?.data?.stats;
-  /* if (isFetching) return <Spin />; */
+  if (isFetching) return <Loader />;
 
   return (
     <Styled.Container>

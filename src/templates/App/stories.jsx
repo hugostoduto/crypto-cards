@@ -1,4 +1,4 @@
-import { App } from '.';
+import { App } from './App';
 
 export default {
   title: 'App',

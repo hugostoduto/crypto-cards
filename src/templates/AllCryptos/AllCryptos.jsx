@@ -4,14 +4,14 @@ import React from 'react';
 import { DollarCircleFilled } from '@ant-design/icons';
 import millify from 'millify';
 import { useGetCryptosQuery } from '../../services/cryptoApi';
-import { Spin } from 'antd';
 import { Card } from '../../components/Card/Card';
 import { Link } from 'react-router-dom';
+import { Loader } from '../../components/Loader/Loader';
 
 export const AllCryptos = () => {
   const { data, isFetching } = useGetCryptosQuery(100);
   const coins = data?.data?.coins;
-  if (isFetching) return <Spin />;
+  if (isFetching) return <Loader />;
   return (
     <Styled.Container>
       <div className="allCryptos-container">
