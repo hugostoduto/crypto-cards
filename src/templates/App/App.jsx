@@ -11,7 +11,7 @@ import { InfoCards } from '../../components/InfoCards/InfoCards';
 import { CryptoChart } from '../../components/Chart/CryptoChart';
 import { SelectCrypto } from '../../components/SelectCrypto/SelectCrypto';
 import React from 'react';
-import { Typography } from 'antd';
+import { Spin } from 'antd';
 import {
   BankFilled,
   CodeFilled,
@@ -19,19 +19,19 @@ import {
   FundFilled,
   SlidersFilled,
 } from '@ant-design/icons';
-const { Title } = Typography;
+import { Link } from 'react-router-dom';
 
 export const App = () => {
-  const { data, isfetching } = useGetCryptosQuery(5);
+  const { data, isFetching } = useGetCryptosQuery(5);
 
   /* const { data: coin, coinLoading } = useGetCryptoDetailsQuery('Qwsogvtv82FCd'); */
-  if (isfetching) return '<h1>Loading</h1>';
 
   /* if (coinLoading) return '<h1>Loading</h1>'; */
 
   const coins = data?.data?.coins;
   /* const coinsDetails = coin?.data?.coin; */
   const stats = data?.data?.stats;
+  /* if (isFetching) return <Spin />; */
 
   return (
     <Styled.Container>
@@ -72,7 +72,7 @@ export const App = () => {
             <div className="icon">
               <DollarCircleFilled />
             </div>
-            <h1>Crypto Coins</h1>
+            <h1>Top 5 Crypto Coins</h1>
           </div>
         </div>
 
@@ -88,6 +88,9 @@ export const App = () => {
               iconUrl={coin.iconUrl}
             />
           ))}
+        </div>
+        <div className="button">
+          <Link to="/allcryptos">See All</Link>
         </div>
         <div className="section-header">
           <div className="section-header-title">

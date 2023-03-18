@@ -89,6 +89,18 @@ ${({ theme }) => css`
 .footer p{
   margin-left: 10px;
 }
+.button{
+  margin-bottom: 50px;
+}
+.button a{
+  padding: 20px 120px;
+  background-color: #8c7af9;
+  border-radius: 20px;
+  font-size: 1.6rem;
+  color: ${theme.colors.white};
+  font-weight: 700;
+}
+
 @media (max-width: 768px){
   .cards-container,.stats-container{
     justify-content: flex-start;
