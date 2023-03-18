@@ -53,12 +53,12 @@ export const App = () => {
         </div>
         <div className="stats-container">
           <InfoCards
-            title="Total Cryptocurrencie"
+            title="Total Cryptocurrencies"
             info={millify(stats?.total)}
           />
           <InfoCards title="Total Exchanges" info={stats?.totalExchanges} />
           <InfoCards
-            title="Total 24h Valume"
+            title="Total 24h Volume"
             info={millify(stats?.total24hVolume)}
           />
           <InfoCards title="Total Market" info={millify(stats?.totalMarkets)} />
@@ -102,7 +102,7 @@ export const App = () => {
         </div>
         <div className="footer">
           <CodeFilled />
-          <p>Develope by @hugostoduto</p>
+          <p>developed by @hugostoduto</p>
         </div>
       </div>
     </Styled.Container>
