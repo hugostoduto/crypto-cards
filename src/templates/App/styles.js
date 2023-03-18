@@ -59,8 +59,6 @@ ${({ theme }) => css`
   display: flex;
   justify-content: center;
   width: 100%;
-  overflow: hidden;
-  overflow-x:auto ;
   flex-wrap: wrap;
   padding: 70px 0px;
 
@@ -90,6 +88,17 @@ ${({ theme }) => css`
 }
 .footer p{
   margin-left: 10px;
+}
+@media (max-width: 768px){
+  .cards-container,.stats-container{
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    overflow-x:auto ;
+    margin-bottom: 30px;
+    padding: 30px;
+    box-sizing: border-box;
+  }
 }
 `}
 

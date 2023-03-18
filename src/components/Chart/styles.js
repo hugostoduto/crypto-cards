@@ -53,13 +53,19 @@ width: 70%;
   flex-direction: column;
   justify-content: center;
 
-  width: 90%;
+  width: 100%;
   box-shadow: ${theme.shadows.lightShadow};
   background-color: ${theme.colors.darkGray};
   padding: 20px 50px;
   border-radius: 20px;
   box-sizing: border-box;
   border: solid 2px ${theme.colors.purple};
+}
+@media (max-width: 768px){
+  width: 90%;
+  .crypto-chart-controls{
+    flex-direction: column;
+  }
 }
 `}
 `;
