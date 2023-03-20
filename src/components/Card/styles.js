@@ -72,7 +72,7 @@ ${({ theme }) => css`
 
   .card-description hr{
 
-    margin: 10px 0px 0px 0px;
+    margin: 10px ;
     width: 90%;
     border: solid 1px ${theme.colors.purple};
 
@@ -81,7 +81,7 @@ ${({ theme }) => css`
     display: flex;
     flex-direction: column;
     width: 100%;
-    justify-content: centers;
+    justify-content: center;
     margin-top: 15px;
   }
   .card-description-text {
@@ -104,9 +104,11 @@ ${({ theme }) => css`
     font-size: 1.2rem;
     margin-left: 10px;
   }
-  @media (max-width:400px){
+  @media (max-width: 420px){
     .card-container{
-      width: 95%;
+      width: 290px;
+      height: 170px;
+
     }
     .card-image{
       width: 50px;
@@ -115,8 +117,37 @@ ${({ theme }) => css`
     .card-image img{
       width: 50px;
       height: 50px;
-
     }
+    .card-description{
+      height: 80%;
+    }
+    .card-description-title h3{
+
+    font-size: 1.4rem;
+
+
   }
+  .card-description-title h4{
+
+    font-size: 0.9rem;
+
+
+  }
+  .card-description hr{
+    width: 100%;
+    margin: 5px ;
+  }
+  .card-description-text-container{
+    margin-top: 10px;
+  }
+    .card-description-text h4{
+    font-size: 1.0rem;
+
+  }
+  .card-description-text p{
+    font-size: 0.8rem;
+  }
+  }
+
 `}
 `;

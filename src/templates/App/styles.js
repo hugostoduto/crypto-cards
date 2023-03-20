@@ -55,23 +55,15 @@ ${({ theme }) => css`
   font-weight: 700;
   font-size: 2.7rem;
 }
-.stats-container{
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  flex-wrap: wrap;
-  padding: 70px 0px;
-
-}
-.cards-container{
+.stats-container, .cards-container{
   justify-content: center;
   padding: 70px 0px;
-
   width: 100%;
   display: flex;
   flex-wrap: wrap;
 
 }
+
 .chart-container{
   padding: 70px 0px;
   width: 100%;
@@ -91,6 +83,7 @@ ${({ theme }) => css`
 }
 .button{
   margin-bottom: 50px;
+
 }
 .button a{
   padding: 20px 120px;
@@ -111,6 +104,42 @@ ${({ theme }) => css`
     padding: 30px;
     box-sizing: border-box;
   }
+}
+@media (max-width: 420px){
+  .header{
+  font-size: 1.0rem;
+  width: 100%;
+  flex-direction: column;
+  color: ${theme.colors.white};
+  box-shadow: ${theme.shadows.lightShadow};
+  height: 150px;
+  margin-bottom:50px ;
+  border-bottom: solid  3px ${theme.colors.purple};
+}
+.header-icon{
+  font-size: 3rem;
+
+}
+.header h1{
+  margin-left: 0px;
+}
+.icon{
+  font-size: 2rem;
+  margin-right: 10px;
+}
+.section-header-title{
+  display: flex;
+  align-items: center;
+}
+.section-header-title h1{
+  font-weight: 700;
+  font-size: 1.7rem;
+}
+.button a{
+  padding: 20px 90px;
+  font-size: 1.2rem;
+
+}
 }
 `}
 

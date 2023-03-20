@@ -77,7 +77,9 @@ ${({ theme }) => css`
   }
   @media (max-width:400px){
     .InfoCards-container{
-      width: 95%;
+      width: 190px;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
     .InfoCards-image{
       width: 50px;

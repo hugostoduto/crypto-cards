@@ -34,7 +34,6 @@ export const App = () => {
           <div className="header-icon">
             <SlidersFilled />
           </div>
-
           <h1>Crypto Market</h1>
         </div>
         <div className="section-header">
