@@ -98,7 +98,8 @@ export const App = () => {
         </div>
         <div className="footer">
           <CodeFilled />
-          <p>developed by @hugostoduto</p>
+          <p>developed by</p>
+          <a href="https://www.hugostoduto.com/">@hugostoduto</a>
         </div>
       </div>
     </Styled.Container>

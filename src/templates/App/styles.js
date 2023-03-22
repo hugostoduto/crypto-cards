@@ -93,6 +93,13 @@ ${({ theme }) => css`
   color: ${theme.colors.white};
   font-weight: 700;
 }
+.footer a{
+  margin-left: 10px;
+  font-size: 1.2rem;
+  color: ${theme.colors.purple};
+  font-weight: 700;
+}
+
 
 @media (max-width: 768px){
   .cards-container,.stats-container{

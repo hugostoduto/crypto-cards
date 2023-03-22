@@ -1,7 +1,7 @@
 import P from 'prop-types';
 import * as Styled from './styles';
 import React from 'react';
-import { DollarCircleFilled } from '@ant-design/icons';
+import { DollarCircleFilled, HomeFilled } from '@ant-design/icons';
 import millify from 'millify';
 import { useGetCryptosQuery } from '../../services/cryptoApi';
 import { Card } from '../../components/Card/Card';
@@ -23,6 +23,7 @@ export const AllCryptos = () => {
             <h1>All Crypto Coins</h1>
           </div>
           <div className="allCryptos-button">
+            <HomeFilled style={{ marginRight: '10px' }} />
             <Link to="/">Back to Home</Link>
           </div>
         </div>
